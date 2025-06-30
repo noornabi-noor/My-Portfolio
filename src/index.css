@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer base {
+  html {
+    @apply transition-colors duration-300;
+  }
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200;
+  }
+}
+
+:root {
+  --color-primary: #FF1D8D;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 25s linear infinite;
+  white-space: nowrap;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 25s linear infinite;
+  white-space: nowrap;
+}
