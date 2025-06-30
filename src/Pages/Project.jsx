@@ -1,10 +1,13 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useNavigate } from "react-router";
+
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 
 const projects = [
   {
+    slug: "historical-artifacts-tracker",
     title: "Historical Artifacts Tracker",
     description:
       "A responsive web application to browse, add, like, and manage historical artifacts with authentication and dynamic features.",
@@ -22,6 +25,7 @@ const projects = [
     image: project1,
   },
   {
+    slug: "roommate-finder",
     title: "Roommate Finder Website",
     description:
       "A full-stack platform that helps individuals find compatible roommates based on location, budget, and lifestyle preferences. Features include dynamic search, authentication, protected routes, and CRUD operations.",
@@ -39,9 +43,10 @@ const projects = [
     image: project2,
   },
   {
+    slug: "appstore-platform",
     title: "AppStore Platform",
     description:
-      "A modern, user-focused AppStore that allows users to browse, discover, and review trending apps by category. Includes protected app detail pages, authentication with Firebase, and dynamic content loading from JSON data. Ensures responsiveness, secure routes, and engaging user experience with features like review submission and dynamic routing.",
+      "A user-centric app discovery platform with trending apps, categorized browsing, user reviews, and seamless app management.",
     tools: [
       "React",
       "React Router",
@@ -50,15 +55,27 @@ const projects = [
       "SweetAlert2",
       "Framer Motion",
     ],
-    github: "https://github.com/noornabi-noor/Roommate-Finder",
+    github: "https://github.com/noornabi-noor/AppDock404",
     live: "https://app-store-6dcba.web.app/",
     image: project3,
   },
 ];
 
 const Projects = () => {
+  const navigate = useNavigate();
   return (
-    <div className="max-w-6xl mx-auto px-4 my-10 space-y-10">
+    <div className="max-w-6xl mx-auto px-4 my-10 space-y-10 rounded-3xl shadow-2xl">
+      <div className="flex flex-col items-center justify-center text-center px-4">
+        <h1 className="text-4xl font-extrabold text-primary mb-4">
+          Featured Projects
+        </h1>
+        <p className="text-base max-w-3xl">
+          A selection of projects that showcase my technical capabilities,
+          creativity, and experience. These projects demonstrate my skills in
+          full-stack development, UI/UX design, and modern web technologies.
+        </p>
+      </div>
+
       {projects.map((project, index) => (
         <div
           key={index}
@@ -113,8 +130,11 @@ const Projects = () => {
             </div>
 
             {/* See More */}
-            <button className="mt-4 w-max px-5 py-2 rounded-full bg-primary hover:bg-[#ff1d8ee1] text-white transition">
-              See More
+            <button
+              className="mt-4 w-max px-5 py-2 rounded-full bg-primary hover:bg-[#ff1d8ee1] text-white transition cursor-pointer"
+              onClick={() => navigate(`/project/${project.slug}`)}
+            >
+              View Details
             </button>
           </div>
         </div>

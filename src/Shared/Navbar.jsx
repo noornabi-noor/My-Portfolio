@@ -25,13 +25,18 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/project" className={navLinkClass}>
-          Projects
+        <NavLink to="/education" className={navLinkClass}>
+          Education
         </NavLink>
       </li>
       <li>
         <NavLink to="/skills" className={navLinkClass}>
           Skills
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/project" className={navLinkClass}>
+          Projects
         </NavLink>
       </li>
       <li>
@@ -87,9 +92,11 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end gap-1.5 md:gap-3">
-        <button className="px-4 py-2 rounded-2xl text-lg font-semibold text-gray-100 bg-gradient-to-r from-[#FF1D8D] to-[#FF1D8D]/70 transition duration-300 hover:from-[#e0137b] hover:to-[#c40e6b]">
-  Download Resume
-</button>
+        <a href="/noor.pdf" download className="inline-block">
+          <button className="px-4 py-2 cursor-pointer rounded-2xl text-lg font-semibold text-gray-100 bg-gradient-to-r from-[#FF1D8D] to-[#FF1D8D]/70 transition duration-300 hover:from-[#e0137b] hover:to-[#c40e6b]">
+            Download Resume
+          </button>
+        </a>
 
         <button
           onClick={toggleTheme}

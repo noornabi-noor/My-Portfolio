@@ -7,6 +7,8 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Project from "../Pages/Project";
 import Skills from "../Pages/Skills";
+import Education from "../Pages/Education";
+import ProjectDetails, { projectLoader } from "../Pages/ProjectDetails";
 
 const router = createBrowserRouter([
   {
@@ -28,12 +30,26 @@ const router = createBrowserRouter([
       },
       {
         path: "project",
-        element: <Project/>
+        element: <Project />,
       },
       {
         path: "skills",
-        element: <Skills/>
-      }
+        element: <Skills />,
+      },
+      {
+        path: "education",
+        element: <Education />,
+      },
+
+      {
+        path: "/project/:slug",
+        element: <ProjectDetails />,
+        loader: async ({ params }) => {
+          const res = await fetch("/ProjectData.json");
+          const data = await res.json();
+          return data.find((p) => p.slug === params.slug) || null;
+        },
+      },
     ],
   },
 ]);
