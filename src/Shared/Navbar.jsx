@@ -1,59 +1,79 @@
 import { motion } from "framer-motion";
-import { NavLink } from "react-router";
 import logo from "../assets/logo11.png";
 import { ThemeContext } from "../context/ThemeContext";
 import { useContext } from "react";
+import { FaFileDownload } from "react-icons/fa";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      // Update URL without navigation (optional)
+      window.history.pushState(null, null, `#${sectionId}`);
+    }
+  };
+
   const navLinkClass = ({ isActive }) =>
     isActive
-      ? "font-semibold text-primary underline underline-offset-4"
-      : "text-gray-100 hover:text-primary";
+      ? "font-semibold text-primary underline underline-offset-4 cursor-pointer"
+      : "text-gray-800 dark:text-gray-100 hover:text-primary transition-colors duration-200 cursor-pointer";
 
   const links = (
     <>
       <li>
-        <NavLink to="/" className={navLinkClass}>
+        <button onClick={() => scrollToSection('home')} className={navLinkClass({})}>
           Home
-        </NavLink>
+        </button>
       </li>
       <li>
-        <NavLink to="/about" className={navLinkClass}>
+        <button onClick={() => scrollToSection('about')} className={navLinkClass({})}>
           About
-        </NavLink>
+        </button>
       </li>
       <li>
-        <NavLink to="/education" className={navLinkClass}>
+        <button onClick={() => scrollToSection('education')} className={navLinkClass({})}>
           Education
-        </NavLink>
+        </button>
       </li>
       <li>
-        <NavLink to="/skills" className={navLinkClass}>
+        <button onClick={() => scrollToSection('skills')} className={navLinkClass({})}>
           Skills
-        </NavLink>
+        </button>
       </li>
       <li>
-        <NavLink to="/project" className={navLinkClass}>
+        <button onClick={() => scrollToSection('projects')} className={navLinkClass({})}>
           Projects
-        </NavLink>
+        </button>
       </li>
       <li>
-        <NavLink to="/contact" className={navLinkClass}>
+        <button onClick={() => scrollToSection('contact')} className={navLinkClass({})}>
           Contact
-        </NavLink>
+        </button>
       </li>
     </>
   );
+
   return (
-    <div className="navbar work-sans-text bg-gray-500 shadow-2xl">
+    <nav className="navbar px-4 sm:px-6 py-2 bg-gray-200 dark:bg-gray-800 shadow-lg sticky top-0 z-50 rounded-2xl">
       <div className="navbar-start">
+        {/* Mobile dropdown menu */}
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden p-2"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-3 w-3"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -62,55 +82,74 @@ const Navbar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
+                d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-100 rounded-box w-20 space-y-2"
           >
             {links}
           </ul>
         </div>
-        <div className="flex items-center work-sans-text gap-2">
-          <img src={logo} className="w-16 h-16" alt="logo" />
-          <a className="btn btn-ghost text-xl hidden md:inline-flex">
+
+        {/* Logo and name */}
+        <div className="flex items-center gap-2">
+          <img src={logo} className="w-10 h-10 sm:w-12 sm:h-12" alt="logo" />
+          <motion.div
+            className="btn btn-ghost text-xl hidden sm:inline-flex"
+            whileHover={{ scale: 1.05 }}
+          >
             Md.{" "}
             <motion.span
               animate={{ color: ["#0000FF", "#FF0000", "#00FF00"] }}
               transition={{ duration: 2, repeat: Infinity }}
+              className="ml-1"
             >
               Noornabi
-            </motion.span>{" "}
-          </a>
+            </motion.span>
+          </motion.div>
         </div>
       </div>
 
+      {/* Desktop navigation */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 gap-1">{links}</ul>
       </div>
 
-      <div className="navbar-end gap-1.5 md:gap-3">
-        <a href="/noor.pdf" download className="inline-block">
-          <button className="px-4 py-2 cursor-pointer rounded-2xl text-lg font-semibold text-gray-100 bg-gradient-to-r from-[#FF1D8D] to-[#FF1D8D]/70 transition duration-300 hover:from-[#e0137b] hover:to-[#c40e6b]">
-            Download Resume
-          </button>
-        </a>
+      {/* Right side buttons */}
+      <div className="navbar-end gap-2 sm:gap-3">
+        <motion.a
+          href="/noor.pdf"
+          download
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-1 sm:gap-2 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 
+             text-xs sm:text-sm md:text-base font-medium sm:font-semibold 
+             text-white bg-gradient-to-r from-[#FF1D8D] to-[#FF1D8D]/70 
+             hover:from-[#e0137b] hover:to-[#c40e6b] 
+             rounded-full sm:rounded-xl transition-all duration-200"
+        >
+          <FaFileDownload className="text-xs sm:text-sm md:text-base" />
+          <span className="hidden md:inline">Download Resume</span>
+          <span className="md:hidden">Resume</span>
+        </motion.a>
 
-        <button
+        <motion.button
           onClick={toggleTheme}
+          whileTap={{ scale: 0.9 }}
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-          className="p-2 md:p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-600 transition-colors"
+          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
         >
           {theme === "dark" ? (
-            <span className="text-yellow-300 text-lg md:text-xl">☀️</span>
+            <span className="text-yellow-300 text-lg">☀️</span>
           ) : (
-            <span className="text-gray-700 text-lg md:text-xl">🌙</span>
+            <span className="text-gray-300 text-lg">🌙</span>
           )}
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </nav>
   );
 };
 

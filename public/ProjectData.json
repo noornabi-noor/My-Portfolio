@@ -132,5 +132,96 @@
     "liveSite": "https://app-store-6dcba.web.app/",
     "github": "https://github.com/noornabi-noor/AppDock404",
     "image": "https://i.postimg.cc/ZRkX1Pn9/project3.png"
+  },
+  {
+    "id": 4,
+    "slug": "micro-tasking-platform",
+    "title": "Micro Tasking and Earning Platform",
+    "subtitle": "Earn by completing micro-tasks or get work done quickly",
+    "description": "A comprehensive platform connecting task workers with buyers needing small jobs completed. Featuring three distinct roles (Worker, Buyer, Admin) with specialized dashboards, secure authentication, and a coin-based payment system. Workers can browse available tasks, submit proofs, and withdraw earnings. Buyers can create tasks, review submissions, and manage payments. Admins oversee platform operations with user management and analytics. Built with modern web technologies for optimal performance and security.",
+    "features": [
+      "Triple-role authentication system (Worker/Buyer/Admin)",
+      "Interactive task marketplace with filtering options",
+      "Coin-based payment system with Stripe integration",
+      "Real-time submission review system with approval workflow",
+      "Comprehensive admin dashboard for platform management",
+      "Responsive design with Framer Motion animations",
+      "Secure JWT authentication with Google Sign-In",
+      "Automated coin calculation and balance tracking"
+    ],
+    "challenges": [
+      "Implementing role-specific navigation and access control",
+      "Developing fair coin exchange rates and withdrawal rules",
+      "Creating seamless task submission and review workflows",
+      "Handling concurrent task assignments and status updates",
+      "Ensuring data security for financial transactions",
+      "Optimizing performance for large task datasets"
+    ],
+    "futurePlans": [
+      "Implement escrow system for disputed tasks",
+      "Add skill-based task matching algorithm",
+      "Develop mobile application version",
+      "Integrate AI for submission verification",
+      "Add referral program with bonus coins",
+      "Implement two-factor authentication"
+    ],
+    "techStack": [
+      "React.js",
+      "React Router",
+      "Firebase/Firestore",
+      "Stripe API",
+      "Swiper.js",
+      "Framer Motion",
+      "ImageBB API",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js"
+    ],
+    "roles": {
+      "worker": {
+        "features": [
+          "Browse available tasks with filters",
+          "Submit task proofs with attachments",
+          "Track earnings and pending payments",
+          "Withdraw funds to payment methods",
+          "View submission history and status"
+        ],
+        "default_coins": 10
+      },
+      "buyer": {
+        "features": [
+          "Create and publish new tasks",
+          "Set worker requirements and payments",
+          "Review and approve submissions",
+          "Purchase coins via Stripe",
+          "View payment history and analytics"
+        ],
+        "default_coins": 50
+      },
+      "admin": {
+        "features": [
+          "Manage user roles and permissions",
+          "Approve/Reject withdrawal requests",
+          "Monitor platform transactions",
+          "Handle user reports and disputes",
+          "Access system-wide analytics"
+        ]
+      }
+    },
+    "businessModel": {
+      "coinSystem": {
+        "purchaseRate": "10 coins = $1",
+        "withdrawalRate": "20 coins = $1",
+        "minimumWithdrawal": "200 coins ($10 value)"
+      },
+      "feeStructure": {
+        "transactionFee": "10% on withdrawals",
+        "serviceFee": "5% on task creation"
+      }
+    },
+    "liveSite": "https://kormo-bazaar.web.app/",
+    "github": "https://github.com/noornabi-noor/micro-tasking-platform",
+    "image": "https://i.postimg.cc/W3tP3cJv/project4.png"
   }
 ]
