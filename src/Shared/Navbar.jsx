@@ -121,7 +121,7 @@ const Navbar = () => {
       {/* Right side buttons */}
       <div className="navbar-end gap-2 sm:gap-3">
         <motion.a
-          href="/public/Noornabi-MERN.pdf"
+          href="/resume.pdf"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
