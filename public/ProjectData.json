@@ -135,7 +135,7 @@
   },
   {
     "id": 4,
-    "slug": "micro-tasking-platform",
+    "slug": "KormoBazaar",
     "title": "Micro Tasking and Earning Platform",
     "subtitle": "Earn by completing micro-tasks or get work done quickly",
     "description": "A comprehensive platform connecting task workers with buyers needing small jobs completed. Featuring three distinct roles (Worker, Buyer, Admin) with specialized dashboards, secure authentication, and a coin-based payment system. Workers can browse available tasks, submit proofs, and withdraw earnings. Buyers can create tasks, review submissions, and manage payments. Admins oversee platform operations with user management and analytics. Built with modern web technologies for optimal performance and security.",
@@ -221,7 +221,7 @@
       }
     },
     "liveSite": "https://kormo-bazaar.web.app/",
-    "github": "https://github.com/noornabi-noor/micro-tasking-platform",
+    "github": "https://github.com/noornabi-noor/KormoBazaar.web.app/tree/main",
     "image": "https://i.postimg.cc/W3tP3cJv/project4.png"
   }
 ]
