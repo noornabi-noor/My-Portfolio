@@ -121,7 +121,7 @@ const Navbar = () => {
       {/* Right side buttons */}
       <div className="navbar-end gap-2 sm:gap-3">
         <motion.a
-          href="/resume.pdf"
+          href={`${import.meta.env.BASE_URL}cv.pdf`}
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
