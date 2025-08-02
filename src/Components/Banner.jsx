@@ -44,7 +44,7 @@ const Banner = () => {
           </div>
           
           <a 
-            href="/resume.pdf" 
+            href="/public/resume.pdf" 
             download 
             className="flex rounded-2xl items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-gray-100 bg-gradient-to-r from-[#FF1D8D] to-[#FF1D8D]/70 hover:from-[#e0137b] hover:to-[#c40e6b] transition-all duration-200 text-sm sm:text-base"
           >

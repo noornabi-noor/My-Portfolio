@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 3,
     "slug": "roommate-finder",
     "title": "Roommate Finder",
     "subtitle": "A smart platform to match compatible roommates based on lifestyle and preferences.",
@@ -90,7 +90,7 @@
     "image": "https://i.postimg.cc/VLDQdbGT/project1.png"
   },
   {
-    "id": 3,
+    "id": 4,
     "slug": "appstore-platform",
     "title": "AppStore Platform",
     "subtitle": "Discover, install, and review apps tailored to your interests.",
@@ -134,7 +134,7 @@
     "image": "https://i.postimg.cc/ZRkX1Pn9/project3.png"
   },
   {
-    "id": 4,
+    "id": 1,
     "slug": "KormoBazaar",
     "title": "Micro Tasking and Earning Platform",
     "subtitle": "Earn by completing micro-tasks or get work done quickly",
