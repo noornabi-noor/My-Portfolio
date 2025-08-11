@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "slug": "KormoBazaar",
+    "title": "Micro Tasking and Earning Platform",
+    "subtitle": "Earn by completing micro-tasks or get work done quickly",
+    "description": "A comprehensive platform connecting task workers with buyers needing small jobs completed. Featuring three distinct roles (Worker, Buyer, Admin) with specialized dashboards, secure authentication, and a coin-based payment system. Workers can browse available tasks, submit proofs, and withdraw earnings. Buyers can create tasks, review submissions, and manage payments. Admins oversee platform operations with user management and analytics. Built with modern web technologies for optimal performance and security.",
+    "features": [
+      "Triple-role authentication system (Worker/Buyer/Admin)",
+      "Interactive task marketplace with filtering options",
+      "Coin-based payment system with Stripe integration",
+      "Real-time submission review system with approval workflow",
+      "Comprehensive admin dashboard for platform management",
+      "Responsive design with Framer Motion animations",
+      "Secure JWT authentication with Google Sign-In",
+      "Automated coin calculation and balance tracking"
+    ],
+    "challenges": [
+      "Implementing role-specific navigation and access control",
+      "Developing fair coin exchange rates and withdrawal rules",
+      "Creating seamless task submission and review workflows",
+      "Handling concurrent task assignments and status updates",
+      "Ensuring data security for financial transactions",
+      "Optimizing performance for large task datasets"
+    ],
+    "futurePlans": [
+      "Implement escrow system for disputed tasks",
+      "Add skill-based task matching algorithm",
+      "Develop mobile application version",
+      "Integrate AI for submission verification",
+      "Add referral program with bonus coins",
+      "Implement two-factor authentication"
+    ],
+    "techStack": [
+      "React.js",
+      "React Router",
+      "Firebase/Firestore",
+      "Stripe API",
+      "Swiper.js",
+      "Framer Motion",
+      "ImageBB API",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js"
+    ],
+    "roles": {
+      "worker": {
+        "features": [
+          "Browse available tasks with filters",
+          "Submit task proofs with attachments",
+          "Track earnings and pending payments",
+          "Withdraw funds to payment methods",
+          "View submission history and status"
+        ],
+        "default_coins": 10
+      },
+      "buyer": {
+        "features": [
+          "Create and publish new tasks",
+          "Set worker requirements and payments",
+          "Review and approve submissions",
+          "Purchase coins via Stripe",
+          "View payment history and analytics"
+        ],
+        "default_coins": 50
+      },
+      "admin": {
+        "features": [
+          "Manage user roles and permissions",
+          "Approve/Reject withdrawal requests",
+          "Monitor platform transactions",
+          "Handle user reports and disputes",
+          "Access system-wide analytics"
+        ]
+      }
+    },
+    "businessModel": {
+      "coinSystem": {
+        "purchaseRate": "10 coins = $1",
+        "withdrawalRate": "20 coins = $1",
+        "minimumWithdrawal": "200 coins ($10 value)"
+      },
+      "feeStructure": {
+        "transactionFee": "10% on withdrawals",
+        "serviceFee": "5% on task creation"
+      }
+    },
+    "liveSite": "https://kormo-bazaar.web.app/",
+    "github": "https://github.com/noornabi-noor/KormoBazaar.web.app/tree/main",
+    "image": "https://i.postimg.cc/W3tP3cJv/project4.png"
+  },
+  {
+    "id": 2,
+    "slug": "historical-artifacts-tracker",
+    "title": "Historical Artifacts Tracker",
+    "subtitle": "Track, explore, and contribute to a growing database of historical artifacts.",
+    "description": "Historical Artifacts Tracker is a full-stack web application that allows users to browse, add, and manage detailed records of historical artifacts like the Rosetta Stone and Antikythera Mechanism. Users can authenticate securely using email/password or Google, like artifacts, and track their own contributions. The app features responsive design, JWT-secured private routes, and an intuitive UI with a carousel banner and sortable artifact lists. Built with React.js, Node.js, Express, MongoDB, and Firebase Authentication, it provides a rich experience for history enthusiasts and researchers.",
+    "features": [
+      "User authentication with email/password and Google login (Firebase Auth)",
+      "JWT-secured private routes for adding, updating, and liking artifacts",
+      "Browse artifacts with sorting by like count",
+      "Add artifact with detailed fields like name, type, history, and discovery info",
+      "Like and unlike artifacts with live updates on like counts",
+      "User dashboard to view and manage personal artifact contributions",
+      "Responsive UI with carousel slider and framer-motion animations",
+      "Search functionality by artifact name on All Artifacts page",
+      "Secure environment variables for Firebase and MongoDB credentials"
+    ],
+    "challenges": [
+      "Implementing JWT authentication alongside Firebase for secure private routes",
+      "Maintaining real-time synchronization of like counts across UI and database",
+      "Creating a smooth and responsive design suitable for all screen sizes",
+      "Ensuring state management and error handling in CRUD operations",
+      "Building secure routes that redirect unauthenticated users appropriately"
+    ],
+    "futurePlans": [
+      "Add in-app notifications for artifact likes and comments",
+      "Implement role-based access control for admin moderation",
+      "Add image upload feature with Firebase Storage or Cloudinary",
+      "Expand artifact categories and advanced filtering options",
+      "Introduce social sharing features for artifacts"
+    ],
+    "techStack": [
+      "React.js",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase Authentication",
+      "JWT"
+    ],
+    "liveSite": "https://historical-artifacts-tra-3ba74.web.app/",
+    "github": "https://github.com/noornabi-noor/Historical-Artifacts-Tracker",
+    "image": "https://i.postimg.cc/VLDQdbGT/project1.png"
+  },
+    {
+    "id": 3,
+    "slug": "roommate-finder",
+    "title": "Roommate Finder",
+    "subtitle": "A smart platform to match compatible roommates based on lifestyle and preferences.",
+    "description": "Roommate Finder is a full-stack web application that helps individuals find ideal roommates by matching preferences such as location, budget, lifestyle habits, and accommodation types. Users can create detailed profiles, browse roommate listings, and communicate via chat. The platform focuses on a clean UX, strong data validation, and secure user authentication. Built using React.js for the frontend, Express and MongoDB for the backend, and Firebase for authentication, this project delivers a seamless and responsive experience across all devices.",
+    "features": [
+      "User authentication with email/password and Google (Firebase Auth)",
+      "JWT-protected routes for enhanced security",
+      "Create, read, update, delete roommate and room listings",
+      "Personalized dashboard for each user",
+      "Search filters by location, budget, and preferences",
+      "Real-time updates and listing status control",
+      "Responsive design using Tailwind CSS",
+      "Clean user interface with intuitive navigation"
+    ],
+    "challenges": [
+      "Handling authentication and authorization securely across client and server using Firebase and JWT.",
+      "Designing a user-friendly and responsive UI that adapts well across mobile and desktop devices.",
+      "Ensuring consistent state management and error handling during CRUD operations.",
+      "Integrating Google OAuth with Firebase and syncing user data with MongoDB.",
+      "Building an efficient listing search filter that works smoothly even on large datasets."
+    ],
+    "futurePlans": [
+      "Add in-app chat feature with socket.io or Firebase real-time database",
+      "Integrate recommendation system using AI to suggest best roommate matches",
+      "Enable listing expiration and renewal logic",
+      "Improve dashboard analytics for user engagement tracking",
+      "Add support for file/image uploads using Cloudinary or Firebase Storage"
+    ],
+    "techStack": [
+      "React.js",
+      "Tailwind CSS",
+      "Firebase Authentication",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Vercel",
+      "Netlify"
+    ],
+    "liveSite": "https://roommate-finder-client-4c6d4.web.app/",
+    "github": "https://github.com/noornabi-noor/Roommate-Finder",
+    "image": "https://i.postimg.cc/tJpwgXhp/project2.png"
+  },
+    {
+    "id": 4,
+    "slug": "appstore-platform",
+    "title": "AppStore Platform",
+    "subtitle": "Discover, install, and review apps tailored to your interests.",
+    "description": "AppStore Platform is a dynamic web application that allows users to browse trending apps, explore categorized collections, and leave reviews. Featuring secure Firebase Authentication and JWT-protected routes, the platform ensures personalized user profiles and seamless app management. Users can discover new apps, view detailed descriptions, and rate apps based on their experience. The site is fully responsive and offers a modern, unique design built using React.js, Node.js, Express, MongoDB, and Firebase.",
+    "features": [
+      "User authentication with email/password and Google login (Firebase Auth)",
+      "Personalized user profiles showing installed apps and reviews",
+      "Browse apps by categories and trending lists",
+      "App detail pages with descriptions, screenshots, and reviews",
+      "Leave ratings and write reviews for apps",
+      "Responsive design with intuitive navigation",
+      "Dynamic route-based page titles and 404 error handling",
+      "Secure environment variables for Firebase and database credentials"
+    ],
+    "challenges": [
+      "Implementing seamless user authentication with JWT and Firebase",
+      "Designing a user-friendly and responsive UI across devices",
+      "Handling CRUD operations for reviews and user-installed apps",
+      "Ensuring smooth search and filtering on large app datasets",
+      "Managing state and error handling effectively in React"
+    ],
+    "futurePlans": [
+      "Add push notifications for app updates and promotions",
+      "Integrate recommendation engine for personalized app suggestions",
+      "Enable app installation status syncing across devices",
+      "Add social sharing and app wishlist features",
+      "Implement admin panel for app moderation and analytics"
+    ],
+    "techStack": [
+      "React.js",
+      "Tailwind CSS",
+      "Firebase Authentication",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Netlify"
+    ],
+    "liveSite": "https://app-store-6dcba.web.app/",
+    "github": "https://github.com/noornabi-noor/AppDock404",
+    "image": "https://i.postimg.cc/ZRkX1Pn9/project3.png"
+  }
+]
