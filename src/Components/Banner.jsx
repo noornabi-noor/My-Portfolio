@@ -2,6 +2,7 @@ import React from "react";
 import noor from "../assets/noor.jpeg";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 import { Typewriter } from "./Typewriter";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
@@ -50,14 +51,16 @@ const Banner = () => {
             </a>
           </div>
 
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="https://drive.google.com/file/d/1IYaz2d1EuDw_CGpwN34406zjnc3ni5Mp/view?usp=sharing"
             download
             className="flex rounded-2xl items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-gray-100 bg-gradient-to-r from-[#FF1D8D] to-[#FF1D8D]/70 hover:from-[#e0137b] hover:to-[#c40e6b] transition-all duration-200 text-sm sm:text-base"
           >
             <FaFileDownload />
             <span>Resume</span>
-          </a>
+          </motion.a>
         </div>
       </div>
 

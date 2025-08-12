@@ -57,7 +57,7 @@ const Footer = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-md text-sm sm:text-base transition-colors duration-200 cursor-pointer hover:from-[#e0137b] hover:to-[#c40e6b] "
+            className="px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-md text-sm sm:text-base transition-colors duration-200 cursor-pointer hover:bg-[#c40e6b] "
           >
             Back to Top
           </motion.button>
