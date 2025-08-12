@@ -1,8 +1,8 @@
 import React from "react";
 import noor from "../assets/noor.jpeg";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
-import { Typewriter } from "./Typewriter";
 import { motion } from "framer-motion";
+import { Typewriter } from "./Typewriter";
 
 const Banner = () => {
   return (
@@ -18,7 +18,8 @@ const Banner = () => {
           </h2>
 
           <div className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-1 sm:mt-2">
-            <Typewriter text="Junior Full Stack Developer" speed={100} />
+            {/* <Typewriter text="Junior Full Stack Developer" speed={100} /> */}
+            <Typewriter text="Junior Full Stack Developer" speed={100} pause={1500} />
           </div>
         </div>
 
@@ -66,14 +67,32 @@ const Banner = () => {
 
       {/* Image Section */}
       <div className="lg:w-1/3 flex justify-center">
-        <div className="relative">
-          <img
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <motion.img
             src={noor}
             alt="Md. Noornabi"
-            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover object-top rounded-full shadow-lg border-4 border-primary dark:border-primary-300 transition-transform duration-500 hover:scale-105"
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover object-top rounded-full shadow-lg border-4 border-primary dark:border-primary-300"
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           />
-          <div className="absolute inset-0 rounded-full border-4 border-transparent hover:border-primary/30 dark:hover:border-primary/50 transition-all duration-300"></div>
-        </div>
+          <motion.div
+            className="absolute inset-0 rounded-full border-4 border-transparent"
+            whileHover={{
+              borderColor: "rgba(59,130,246,0.3)",
+              scale: 1.1,
+              transition: { duration: 0.3 },
+            }}
+          />
+        </motion.div>
       </div>
     </div>
   );
