@@ -76,13 +76,7 @@ const Banner = () => {
             </a>
 
             {/* LeetCode */}
-            <a href="https://leetcode.com/u/noornabinoor1770/">
-              <img
-                src="https://i.ibb.co.com/gLgDkF0r/leetcode.png"
-                alt="LeetCode Icon"
-                className="w-5 h-5 transition duration-200 hover:brightness-125 hover:scale-110 hover:opacity-80 cursor-pointer"
-              />
-            </a>
+
           </div>
 
           <motion.a
