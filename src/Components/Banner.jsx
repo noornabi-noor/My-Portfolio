@@ -19,7 +19,11 @@ const Banner = () => {
 
           <div className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-1 sm:mt-2">
             {/* <Typewriter text="Junior Full Stack Developer" speed={100} /> */}
-            <Typewriter text="Junior Full Stack Developer" speed={100} pause={1500} />
+            <Typewriter
+              text="Junior Full Stack Developer"
+              speed={100}
+              pause={1500}
+            />
           </div>
         </div>
 
@@ -37,7 +41,7 @@ const Banner = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub profile"
-              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200 text-xl"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200 text-xl hover:scale-110 hover:opacity-80"
             >
               <FaGithub />
             </a>
@@ -46,9 +50,38 @@ const Banner = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
-              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200 text-xl"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200 text-xl hover:scale-110 hover:opacity-80"
             >
               <FaLinkedin />
+            </a>
+            {/* Codeforces */}
+            <a
+              href="https://codeforces.com/profile/_Noornabi-Noor_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Codeforces profile"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200 text-xl hover:scale-110 hover:opacity-80"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <rect x="4" y="3" width="4" height="18" />
+                <rect x="10" y="8" width="4" height="13" />
+                <rect x="16" y="13" width="4" height="8" />
+              </svg>
+            </a>
+
+            {/* LeetCode */}
+            <a href="https://leetcode.com/u/noornabinoor1770/">
+              <img
+                src="https://i.ibb.co.com/gLgDkF0r/leetcode.png"
+                alt="LeetCode Icon"
+                className="w-5 h-5 transition duration-200 hover:brightness-125 hover:scale-110 hover:opacity-80 cursor-pointer"
+              />
             </a>
           </div>
 
