@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+  font-family: 'EB Garamond', serif;
+}
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
@@ -11,6 +17,8 @@
     @apply bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200;
   }
 }
+
+
 
 :root {
   --color-primary: #FF1D8D;
