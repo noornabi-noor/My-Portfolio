@@ -223,5 +223,47 @@
     "liveSite": "https://app-store-6dcba.web.app/",
     "github": "https://github.com/noornabi-noor/AppDock404",
     "image": "https://i.postimg.cc/ZRkX1Pn9/project3.png"
-  }
+  },
+  {
+  "id": 5,
+  "slug": "vehicle-rental-system",
+  "title": "Vehicle Rental System (Backend API)",
+  "subtitle": "A secure and scalable backend API for managing vehicle rentals.",
+  "description": "The Vehicle Rental System is a backend REST API built using Node.js, TypeScript, Express, and PostgreSQL. It provides a complete solution for managing vehicle rentals with secure authentication and role-based access control. The system supports vehicle inventory management, user management with Admin and Customer roles, and a booking system with rental duration and cost calculation. Authentication is handled via JWT, ensuring secure access to protected routes.",
+  "features": [
+    "Vehicle inventory management with availability tracking",
+    "User management with Admin and Customer roles",
+    "Booking system with rental duration and cost calculation",
+    "Secure authentication using JWT",
+    "Role-based authorization",
+    "Modular and feature-based project structure",
+    "Clean separation of concerns"
+  ],
+  "challenges": [
+    "Designing a normalized database schema for users, vehicles, and bookings",
+    "Implementing secure JWT authentication and role-based authorization",
+    "Ensuring booking validation (dates, availability, and active status)",
+    "Handling vehicle deletion only when no active bookings exist",
+    "Maintaining clean modular code with separation of concerns"
+  ],
+  "futurePlans": [
+    "Add payment gateway integration for online rental payments",
+    "Implement advanced search and filtering for vehicles",
+    "Add reporting and analytics for admins",
+    "Enable email/SMS notifications for booking confirmations",
+    "Introduce loyalty programs and discounts for frequent customers"
+  ],
+  "techStack": [
+    "Node.js",
+    "TypeScript",
+    "Express.js",
+    "PostgreSQL",
+    "bcryptjs",
+    "jsonwebtoken",
+    "Vercel (Deployment)"
+  ],
+  "liveSite": "https://vehical-rental-system-alpha.vercel.app/",
+  "github": "https://github.com/noornabi-noor/-Vehicle-Rental-System",
+  "image": "https://i.ibb.co.com/b50g78Xj/vehicle-rental-system.png"
+}
 ]
