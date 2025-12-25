@@ -16,6 +16,8 @@ import {
   SiMongodb,
   SiFirebase,
   SiMysql,
+  SiPostgresql,
+  SiTypescript,
 } from "react-icons/si";
 
 const skills = [
@@ -30,6 +32,7 @@ const skills = [
   { name: "Express.js", icon: <SiExpress className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
   { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
   { name: "MySQL", icon: <SiMysql className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
   { name: "Firebase", icon: <SiFirebase className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
 
   // Programming Languages
@@ -37,6 +40,7 @@ const skills = [
   { name: "C++", icon: <SiCplusplus className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
   { name: "Java", icon: <FaJava className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
   { name: "Python", icon: <FaPython className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
+  { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
 
   // Tools
   { name: "GitHub", icon: <FaGithub className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" /> },
