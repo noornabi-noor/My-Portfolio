@@ -26,17 +26,24 @@ const Education = () => {
               location: "Trishal, Mymensingh",
               image: "https://i.postimg.cc/RZhvJ3VX/jkkniu.png",
               details: [
-                { label: "Expected Graduation", value: "December 2025" },
-                { label: "Current Year", value: "Final Year" },
+                {
+                  label: "Study Period",
+                  value: "January 2022 – December 2025",
+                },
+                {
+                  label: "Status",
+                  value: "Final examination completed (Result pending)",
+                },
               ],
             },
+            ,
             {
               title: "Higher Secondary Certificate",
               institution: "Joypurhat Govt. College",
               location: "Joypurhat, Rajshahi",
               image: "https://i.postimg.cc/jjhvVjyY/jgc.png",
               details: [
-                { label: "Started", value: "July 2019" },
+                { label: "Started", value: "July 2017" },
                 { label: "Left", value: "July 2019" },
               ],
             },
