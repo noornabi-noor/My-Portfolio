@@ -27,3 +27,4 @@ dist-ssr
 
 # abashed-drop.surge.sh
 .vercel
+.env*.local
