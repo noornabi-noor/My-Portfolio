@@ -77,4 +77,4 @@ src/
 Feel free to reach out to me through the contact form on my portfolio or connect with me formally on LinkedIn or GitHub (links available on the live site).
 
 ---
-*Built with ❤️ by Noor Nabi*
+*Built with ❤️ by Noornabi*
