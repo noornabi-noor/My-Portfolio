@@ -1,4 +1,4 @@
-# 👨‍💻 Noor Nabi's Personal Portfolio
+# 👨‍💻 Noornabi's Personal Portfolio
 
 Welcome to the repository of my personal portfolio website! This project showcases my skills, experience, and the software development projects I've built. It is designed to be interactive, responsive, and visually appealing.
 
