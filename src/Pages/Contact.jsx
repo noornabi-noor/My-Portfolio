@@ -4,7 +4,8 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm(import.meta.env.VITE_formspree_key);
+  const formKey = import.meta.env.VITE_formspree_key || "dummy_key";
+  const [state, handleSubmit] = useForm(formKey);
 
   return (
     <section

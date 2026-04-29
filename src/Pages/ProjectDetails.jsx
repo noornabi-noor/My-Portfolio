@@ -1,10 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import projectData from "../ProjectData.json";
 
 export async function projectLoader({ params }) {
-  const res = await fetch('/ProjectData.json');
-  const data = await res.json();
-  const project = data.find(p => p.id === Number(params.id));
+  const project = projectData.find(p => String(p.id) === params.id || p.slug === params.slug);
   return project || null;
 }
 

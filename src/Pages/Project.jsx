@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
-import projectData from "/public/ProjectData.json";
+import projectData from "../ProjectData.json";
 import { motion } from "framer-motion";
 
 const Projects = () => {

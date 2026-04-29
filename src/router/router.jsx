@@ -1,5 +1,5 @@
-import React, { Children } from "react";
-import { createBrowserRouter } from "react-router";
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../Layout/RootLayout";
 import ErrorPage from "../Components/ErrorPage";
 import Home from "../Pages/Home";
@@ -9,6 +9,7 @@ import Project from "../Pages/Project";
 import Skills from "../Pages/Skills";
 import Education from "../Pages/Education";
 import ProjectDetails, { projectLoader } from "../Pages/ProjectDetails";
+import projectData from "../ProjectData.json";
 
 const router = createBrowserRouter([
   {
@@ -42,12 +43,10 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/project/:slug",
+        path: "project/:slug",
         element: <ProjectDetails />,
         loader: async ({ params }) => {
-          const res = await fetch("/ProjectData.json");
-          const data = await res.json();
-          return data.find((p) => p.slug === params.slug) || null;
+          return projectData.find((p) => p.slug === params.slug) || null;
         },
       },
     ],

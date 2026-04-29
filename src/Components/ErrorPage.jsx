@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
+  const error = useRouteError();
+  console.error("Route error:", error);
+
   return (
     <section className="flex flex-col items-center justify-center min-h-screen bg-white text-gray-800 px-4">
 
@@ -11,26 +15,32 @@ const ErrorPage = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        404
+        Oops!
       </motion.h1>
 
       <motion.h2
-        className="text-2xl font-semibold mb-2"
+        className="text-2xl font-semibold mb-2 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        Page Not Found
+        {error?.status === 404 ? "Page Not Found" : "An error occurred"}
       </motion.h2>
 
-      <motion.p
-        className="text-gray-500 max-w-md text-center mb-6"
+      <motion.div
+        className="text-red-500 max-w-lg text-left bg-gray-100 p-4 rounded-lg overflow-auto mb-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        Sorry, the page you’re looking for doesn’t exist or has been moved.
-      </motion.p>
+        <p className="font-bold mb-2 text-gray-700">Error Details:</p>
+        <p>{error?.statusText || error?.message || "Unknown Error"}</p>
+        {error?.stack && (
+          <pre className="mt-2 text-xs text-gray-600 bg-white p-2 rounded border border-gray-300">
+            {error.stack}
+          </pre>
+        )}
+      </motion.div>
 
       <motion.a
         href="/"

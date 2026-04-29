@@ -30,13 +30,8 @@ const Education = () => {
                   label: "Study Period",
                   value: "January 2022 – December 2025",
                 },
-                {
-                  label: "Status",
-                  value: "Final examination completed (Result pending)",
-                },
               ],
             },
-            ,
             {
               title: "Higher Secondary Certificate",
               institution: "Joypurhat Govt. College",
